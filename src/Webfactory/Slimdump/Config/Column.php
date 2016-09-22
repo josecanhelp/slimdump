@@ -15,6 +15,7 @@ class Column
 {
 
     private $config = null;
+    private $faker;
 
     /**
      * Column constructor.
@@ -24,6 +25,7 @@ class Column
     public function __construct(\SimpleXMLElement $config)
     {
         $this->config = $config;
+        $this->faker = \Faker\Factory::create();
 
         $attr = $config->attributes();
         $this->selector = (string) $attr->name;
@@ -63,6 +65,10 @@ class Column
 
         if ($this->dump == Config::REPLACE) {
             return $this->config->attributes()->replacement;
+        }
+
+        if ($this->dump == Config::REPLACEEMAIL) {
+            return $this->faker->email;
         }
 
         if ($this->dump == Config::BLANK) {

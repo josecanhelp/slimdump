@@ -19,6 +19,7 @@ class Config
     const FULL = 5;
     const BLANK = 6;
     const REPLACE = 7;
+    const REPLACEEMAIL = 8;
 
     private $tables = array();
 
