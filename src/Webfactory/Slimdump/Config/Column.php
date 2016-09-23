@@ -67,8 +67,36 @@ class Column
             return $this->config->attributes()->replacement;
         }
 
-        if ($this->dump == Config::REPLACEEMAIL) {
+        if ($this->dump == Config::FIRSTNAME) {
+            return $this->faker->firstName;
+        }
+
+        if ($this->dump == Config::LASTNAME) {
+            return $this->faker->lastName;
+        }
+
+        if ($this->dump == Config::EMAIL) {
             return $this->faker->email;
+        }
+
+        if ($this->dump == Config::PHONE) {
+            return $this->faker->numberBetween($min = 1111111111, $max = 9999999999);
+        }
+
+        if ($this->dump == Config::IDENTIFIER) {
+            return $this->faker->str_random(15);
+        }
+
+        if ($this->dump == Config::PASSWORD) {
+            return 'password';
+        }
+
+        if ($this->dump == Config::STRIPEID) {
+            return str_random(15);
+        }
+
+        if ($this->dump == Config::STRIPECUSTID) {
+            return str_random(15);
         }
 
         if ($this->dump == Config::BLANK) {

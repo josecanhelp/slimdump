@@ -19,7 +19,14 @@ class Config
     const FULL = 5;
     const BLANK = 6;
     const REPLACE = 7;
-    const REPLACEEMAIL = 8;
+    const FIRSTNAME = 8;
+    const LASTNAME = 9;
+    const EMAIL = 10;
+    const PHONE = 11;
+    const IDENTIFIER = 12;
+    const PASSWORD = 13;
+    const STRIPEID = 14;
+    const STRIPECUSTID = 15;
 
     private $tables = array();
 
