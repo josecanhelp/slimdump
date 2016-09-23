@@ -84,7 +84,7 @@ class Column
         }
 
         if ($this->dump == Config::IDENTIFIER) {
-            return $this->faker->word . '-' . $this->faker->word . '-' . $this->faker->unique()->randomDigitNotNull;
+            return $this->faker->word . '-' . $this->faker->word . '-' . $this->faker->randomDigitNotNull;
         }
 
         if ($this->dump == Config::PASSWORD) {
