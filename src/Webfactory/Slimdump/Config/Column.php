@@ -84,7 +84,7 @@ class Column
         }
 
         if ($this->dump == Config::IDENTIFIER) {
-            return $this->faker->str_random(15);
+            return $this->faker->word . '-' . $this->faker->word;
         }
 
         if ($this->dump == Config::PASSWORD) {
@@ -92,11 +92,11 @@ class Column
         }
 
         if ($this->dump == Config::STRIPEID) {
-            return str_random(15);
+            return md5(time());
         }
 
         if ($this->dump == Config::STRIPECUSTID) {
-            return str_random(15);
+            return md5(time());
         }
 
         if ($this->dump == Config::BLANK) {
