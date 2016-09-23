@@ -76,7 +76,7 @@ class Column
         }
 
         if ($this->dump == Config::EMAIL) {
-            return $this->faker->safeEmail;
+            return $this->faker->userName . $this->faker->randomDigitNotNull . $this->faker->safeEmailDomain;
         }
 
         if ($this->dump == Config::PHONE) {
@@ -84,7 +84,7 @@ class Column
         }
 
         if ($this->dump == Config::IDENTIFIER) {
-            return $this->faker->word . '-' . $this->faker->word . '-' . $this->faker->randomDigitNotNull;
+            return $this->faker->slug . '-' . $this->faker->randomDigitNotNull;
         }
 
         if ($this->dump == Config::PASSWORD) {
