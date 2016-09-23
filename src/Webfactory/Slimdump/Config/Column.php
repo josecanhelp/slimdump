@@ -76,7 +76,7 @@ class Column
         }
 
         if ($this->dump == Config::EMAIL) {
-            return $this->faker->email;
+            return $this->faker->safeEmail;
         }
 
         if ($this->dump == Config::PHONE) {
